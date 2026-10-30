@@ -1,87 +1,40 @@
+
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PORTFOLIO | مهشید ارجمندنیا</title>
+  <title>PORTFOLIO | Mahshid Art</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <main class="home portfolio-page">
 
-    <nav class="portfolio-home-link" dir="ltr">
+    <nav class="portfolio-home-link">
       <a href="index.html">HOME</a>
     </nav>
 
-    <section class="portfolio-gallery" aria-label="آثار هنری">
-      <article class="artwork-item">
-        <button class="artwork-square" type="button" data-artwork="artwork-1.jpg" data-alt="اثر هنری شماره یک" aria-label="بزرگ‌نمایی اثر شماره یک">
-          <img src="artwork-1.jpg" alt="اثر هنری شماره یک">
-        </button>
-        <p class="artwork-description">
-          توضیحات اثر شماره یک؛ این متن را با توضیحات واقعی اثر جایگزین کنید.
-        </p>
-      </article>
+    <section class="portfolio-categories">
 
-      <article class="artwork-item">
-        <button class="artwork-square" type="button" data-artwork="artwork-2.jpg" data-alt="اثر هنری شماره دو" aria-label="بزرگ‌نمایی اثر شماره دو">
-          <img src="artwork-2.jpg" alt="اثر هنری شماره دو">
-        </button>
-        <p class="artwork-description">
-          توضیحات اثر شماره دو؛ این متن را با توضیحات واقعی اثر جایگزین کنید.
-        </p>
-      </article>
+      <a href="engraving.html" class="portfolio-category">
+        <span>01</span>
+        <h2>Engraving</h2>
+      </a>
 
-      <article class="artwork-item">
-        <button class="artwork-square" type="button" data-artwork="artwork-3.jpg" data-alt="اثر هنری شماره سه" aria-label="بزرگ‌نمایی اثر شماره سه">
-          <img src="artwork-3.jpg" alt="اثر هنری شماره سه">
-        </button>
-        <p class="artwork-description">
-          توضیحات اثر شماره سه؛ این متن را با توضیحات واقعی اثر جایگزین کنید.
-        </p>
-      </article>
+      <a href="ecoprint.html" class="portfolio-category">
+        <span>02</span>
+        <h2>Ecoprint</h2>
+      </a>
+
+      <a href="papermaking.html" class="portfolio-category">
+        <span>03</span>
+        <h2>Papermaking</h2>
+      </a>
+
     </section>
-
-    <div class="artwork-lightbox" id="artworkLightbox" aria-hidden="true">
-      <button class="lightbox-close" type="button" aria-label="بستن تصویر">&times;</button>
-      <img class="lightbox-image" id="lightboxImage" src="" alt="">
-    </div>
 
   </main>
 
-  <script>
-    const lightbox = document.getElementById("artworkLightbox");
-    const lightboxImage = document.getElementById("lightboxImage");
-    const closeButton = document.querySelector(".lightbox-close");
-
-    document.querySelectorAll(".artwork-square").forEach((artwork) => {
-      artwork.addEventListener("click", () => {
-        lightboxImage.src = artwork.dataset.artwork;
-        lightboxImage.alt = artwork.dataset.alt;
-        lightbox.classList.add("is-open");
-        lightbox.setAttribute("aria-hidden", "false");
-        document.body.classList.add("lightbox-active");
-      });
-    });
-
-    function closeLightbox() {
-      lightbox.classList.remove("is-open");
-      lightbox.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("lightbox-active");
-      lightboxImage.src = "";
-    }
-
-    closeButton.addEventListener("click", closeLightbox);
-
-    lightbox.addEventListener("click", (event) => {
-      if (event.target === lightbox) closeLightbox();
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
-        closeLightbox();
-      }
-    });
-  </script>
 </body>
 </html>
