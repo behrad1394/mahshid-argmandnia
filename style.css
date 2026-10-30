@@ -475,3 +475,12 @@ font-size: clamp(30px, 6vw, 50px);
   opacity: 0.7;
 }
 
+
+.category-title {
+  color: white;
+  text-align: center;
+  font-family: 'HeadingNow', sans-serif;
+  font-size: clamp(35px, 6vw, 60px);
+  margin: 50px 0;
+}
+
