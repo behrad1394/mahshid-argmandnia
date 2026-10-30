@@ -369,12 +369,13 @@ html, body {
   width: 300px;
   margin-top: 20px;
   color: #ffffff;
-  font-family: Tahoma, Arial, sans-serif;
+ font-family: Tahoma, Arial, sans-serif !important;
   font-size: 17px;
   line-height: 2;
   text-align: right;
   direction: rtl;
 }
+
 
 @media (max-width: 600px) {
   .about-image {
