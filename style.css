@@ -484,3 +484,20 @@ font-size: clamp(30px, 6vw, 50px);
   margin: 50px 0;
 }
 
+
+/* Portfolio categories position */
+
+.portfolio-categories {
+  min-height: auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 35px 25px;
+  gap: 15px;
+}
+
+.portfolio-category {
+  width: fit-content;
+  border-bottom: none;
+  padding: 10px;
+}
+
