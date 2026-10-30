@@ -387,10 +387,7 @@ html, body {
     width: 260px;
   }
 }
-* {
-  font-family: 'HeadingNow', sans-serif !important;
-  font-weight: 800;
-}
+
 /* فونت صفحه تماس */
 .contact-page {
     font-family: Tahoma, Arial, sans-serif;
@@ -404,4 +401,32 @@ html, body {
 /* فونت دکمه HOME */
 .my-button {
     font-family: 'HeadingNow', sans-serif !important;
+}
+/* فونت انگلیسی سایت */
+.english-name,
+.menu a {
+    font-family: 'HeadingNow', sans-serif;
+    font-weight: 800;
+}
+
+/* فونت فارسی صفحه About */
+.about-description {
+    font-family: Tahoma, Arial, sans-serif !important;
+    font-weight: normal;
+    direction: rtl;
+}
+
+/* فونت فارسی صفحه Contact */
+.contact-page,
+.contact-page a:not(.my-button) {
+    font-family: Tahoma, Arial, sans-serif !important;
+    font-weight: normal;
+    letter-spacing: normal;
+}
+
+/* فونت دکمه HOME در تمام صفحات */
+.my-button,
+.portfolio-home-link a {
+    font-family: 'HeadingNow', sans-serif !important;
+    font-weight: 800;
 }
