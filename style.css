@@ -222,6 +222,11 @@ font-size: clamp(30px, 6vw, 50px);
 @media (max-width: 600px) {
   .portfolio-page {
     padding-top: 25px;
+      .english-name {
+    font-size: 38px !important;
+    white-space: nowrap;
+    margin-left: -12px;
+}
   }
 
   .portfolio-home-link a {
