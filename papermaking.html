@@ -98,6 +98,12 @@
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") closeLightbox();
     });
+
+    document.querySelectorAll(".artwork-square").forEach((artwork) => {
+  artwork.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+  });
+});
   </script>
 
 </body>
