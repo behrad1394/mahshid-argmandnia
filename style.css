@@ -506,3 +506,20 @@ font-size: clamp(30px, 6vw, 50px);
   user-select: none;
   pointer-events: none;
 }
+
+/* Dark background overlay on all devices */
+
+.home {
+    position: relative;
+    isolation: isolate;
+    background-color: #111;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.30);
+    z-index: -1;
+    pointer-events: none;
+}
