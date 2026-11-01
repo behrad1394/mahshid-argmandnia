@@ -519,7 +519,7 @@ font-size: clamp(30px, 6vw, 50px);
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.30);
+    background: rgba(0, 0, 0, 0.45);
     z-index: -1;
     pointer-events: none;
 }
