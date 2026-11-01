@@ -98,6 +98,30 @@
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") closeLightbox();
     });
+    document.querySelectorAll(".artwork-square").forEach((artwork) => {
+  artwork.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+  });
+});
+    // Disable image context menu in gallery and lightbox
+document.addEventListener("contextmenu", (event) => {
+  if (
+    event.target.closest(".artwork-square") ||
+    event.target.closest(".artwork-lightbox")
+  ) {
+    event.preventDefault();
+  }
+});
+
+// Prevent dragging images
+document.querySelectorAll(".artwork-square img, .lightbox-image")
+  .forEach((img) => {
+    img.setAttribute("draggable", "false");
+    img.addEventListener("dragstart", (event) => {
+      event.preventDefault();
+    });
+  });
+    
   </script>
 
 </body>
